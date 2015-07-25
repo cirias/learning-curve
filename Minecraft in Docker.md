@@ -2,7 +2,7 @@
 
 ```
 # for op user
-docker run -d -it --rm -p 25565:25565 -v /home/ubuntu/minecraft:/data -e EULA=TRUE itzg/minecraft-server-e OPS=sirius,cc
+docker run -d -it -p 25565:25565 -v /home/sirius/minecraft:/data -e EULA=TRUE -e OPS=Sirius_O,ccc itzg/minecraft-server
 docker attach mc
 
 # for serve
