@@ -2,13 +2,14 @@
 
 ```
 # for op user
-sudo docker run -it --rm -p 25565:25565 -v /home/ubuntu/minecraft:/data -e EULA=TRUE itzg/minecraft-server
+docker run -d -it --rm -p 25565:25565 -v /home/ubuntu/minecraft:/data -e EULA=TRUE itzg/minecraft-server-e OPS=sirius,cc
+docker attach mc
 
 # for serve
-sudo docker run -d -p 25565:25565 --name minecraft -v /home/ubuntu/minecraft:/data -e EULA=TRUE itzg/minecraft-server
+docker run -d -p 25565:25565 --name minecraft -v /home/ubuntu/minecraft:/data -e EULA=TRUE itzg/minecraft-server
 
 # with opts
-sudo docker run -d \
+docker run -d \
   -p 25565:25565 \
   --name minecraft \
   --privileged=true \
